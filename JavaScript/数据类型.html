@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body></body>
+<script>
+  /*
+    1 Undefined
+    2 Null
+    3 Boolean
+    4 Number
+    5 String
+    6 object
+  */
+
+  /*
+    7 Symbol  
+    代表创建后独一无二且不可改变的数据类型 
+    主要是为了解决可能出现的全局变量冲突的问题
+  */
+
+  /*
+     8 BigInt 数字类型的数据
+    可以表示任意精度格式的整数
+    使用BigInt 可以安全地存储和操作大整数，即使这个数超出的Number能够表示的安全整数范围
+  */
+
+
+  /*
+    栈Stack: 原始数据类型(Null Undefined Boolean Number String)
+  
+    原始数据类型直接存放在栈中的简单数据段,占据空间小，大小固定，属于被频繁使用的数据，所以被放入栈中存储
+  */
+
+
+
+  /*
+   堆heap  :引用数据类型:(object array function)
+  
+   引用数据类型存储在堆中的对象，占据空间大，大小不固定。如果存储在栈中就会影响程序运行的性能;
+   引用数据类型在栈中存储了指针,该指针指向了堆中该实体的起始位置。
+   当解释器寻找引用值时候,会首先检索其在栈中的地址,取得地址后从堆中获得实体。
+  */
+
+
+  /*
+    堆和栈道概念存在于数据结构和操作系统内存中
+    在数据结构中 栈中数据的存取方式是先进后出
+  
+  */
+</script>
+
+</html>
