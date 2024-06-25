@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const arr = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 6, 66, 66, 666, 666, 6, 66, 6];
+      function findMostFrequentCount(arr) {
+        // 创建一个对象来存储数字出现的次数
+        const frequentcyMap = {};
+        // 遍历数组,统计没个数字出现的次数
+        arr.forEach((num) => {
+          if (frequentcyMap[num]) {
+            frequentcyMap[num] = frequentcyMap[num] + 1;
+          } else {
+            frequentcyMap[num] = 1;
+          }
+        });
+        console.log(frequentcyMap, "frequentcyMap");
+        // 初始化最大次数
+        let maxCount = 0;
+        // 遍历frequencyMap 找出出现次数最多数字的次数
+        for (let _num in frequentcyMap) {
+          if (frequentcyMap[_num] > maxCount) {
+            maxCount = frequentcyMap[_num];
+          }
+        }
+        console.log(maxCount, "maxCount");
+        return maxCount;
+      }
+      findMostFrequentCount(arr);
+      /*
+        今天去面试 固生堂外包 问了我这个问题 我不会
+        又问了我一个比较简单的 使用过滤 我用了下 filter  和 map  forEach  说了下 
+        验证一下去吧
+      
+      */
+      // 使用filter 是可以的
+      function easyFunc(arr) {
+        const temp = arr.filter((item) => {
+          return item !== 2;
+        });
+        console.log(temp);
+      }
+      easyFunc(arr)
+      function easyMapOrForEachFunc(arr) {
+        const temp = []
+        const _temp = []
+         arr.forEach((item) => {
+          if(item !==2){
+            temp.push(item)
+          }
+        });
+        arr.map((item) => {
+          if(item !==2){
+            _temp.push(item)
+          }
+        });
+        console.log(temp);
+        console.log(_temp);
+      }
+      easyMapOrForEachFunc(arr)
+    </script>
+  </body>
+</html>
