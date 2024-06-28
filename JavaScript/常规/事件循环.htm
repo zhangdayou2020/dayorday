@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            宏任务
+            Node 或者 浏览器发起
+
+            1. script (可以理解为外层同步代码) 
+            2. setTimeout/setInterval 
+            3. UI rendering/UI事件 4. 
+            postMessage，MessageChannel 
+            5. setImmediate，I/O（Node.js）
+
+            优先级在微任务后面
+        */
+       /*
+        微任务
+        js引擎发起的
+        1. Promise 2. MutaionObserver 
+        3. Object.observe（已废弃；Proxy 对象替代） 
+        4. process.nextTick（Node.js）
+       */
+
+       /*
+       微任务先执行，宏任务后执行，微任务不会触发新一轮的tick，宏任务会触发新一轮的tick
+
+       1.js调用栈
+          js调用栈是一个后进先出的数据结构,当函数被调用的时候,会被添加到栈中顶部,执行完成之后从栈顶部移出该函数
+          直到栈被清空
+       2.同步任务  异步任务
+         js单线程中的任务分为同步任务和异步任务，同步任务会调用栈中按照顺序排队等待主线程执行
+         异步任务则会在一部有了结果后将注册的回调函数添加到任务队列中等待主线程的空闲时候
+
+       3. eventloop
+         调用栈中的同步任务都执行完毕以后，栈内就被清空了 代表主线程空闲 这个时候就会从任务队列中按照顺序读一个
+         一个放入到栈中执行 每一次栈被清空 都会去任务队列中看看就没有任务  有的话就去执行  一直循环往复 
+       */
+    </script>
+</body>
+</html>
